@@ -4,7 +4,7 @@ user_id INT NOT NULL,
 group_id INT NOT NULL,
 role_id INT NOT NULL,
 FOREIGN KEY (user_id) REFERENCES user(id),
-FOREIGN KEY (group_id) REFERENCES group(id),
+FOREIGN KEY (group_id) REFERENCES `group`(id),
 FOREIGN KEY (role_id) REFERENCES role(id)
 );
 
