@@ -2,7 +2,7 @@ CREATE TABLE `group` (
 id INT AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(100) NOT NULL,
 description VARCHAR(255),
-color VARCHAR(6)
+color VARCHAR(11)
 );
 
 INSERT INTO `group` (id,name, description, color) VALUES
