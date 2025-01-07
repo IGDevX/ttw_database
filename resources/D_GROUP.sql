@@ -1,11 +1,11 @@
-CREATE TABLE group (
+CREATE TABLE `group` (
 id INT AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(100) NOT NULL,
 description VARCHAR(255),
 color VARCHAR(6)
 );
 
-INSERT INTO group (id,name, description, color) VALUES
+INSERT INTO `group` (id,name, description, color) VALUES
 (1,'Summer Getaways', 'Group to plan summer vacations and trips.', 'FFA500'),
 (2,'Beach Lovers', 'Find the best beaches and plan trips together.', '00CED1'),
 (3,'Adventure Seekers', 'Group for hiking, camping, and adventure sports.', '228B22'),
