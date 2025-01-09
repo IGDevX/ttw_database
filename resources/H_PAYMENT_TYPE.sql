@@ -5,14 +5,10 @@ CREATE TABLE payment_type (
     FOREIGN KEY (group_id) REFERENCES `group`(id)
 );
 
--- Insertion des moyens de paiement
 INSERT INTO payment_type (name, group_id) VALUES
--- Moyens de paiement communs sans groupe
 ('Cash', NULL),
 ('Credit Card', NULL),
 ('Bank Transfer', NULL),
-
--- Moyens de paiement spécifiques liés à des groupes
 ('Paylib', 1),
 ('PayPal', 1),
-('Stripe', 2),
+('Stripe', 2)
