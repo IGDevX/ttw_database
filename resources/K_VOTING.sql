@@ -1,15 +1,16 @@
 CREATE TABLE voting (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    voter_name VARCHAR(100) NOT NULL,
+    member_id INT NOT NULL,
     poll_item_id INT NOT NULL,
+    FOREIGN KEY (member_id) REFERENCES member(id),
     FOREIGN KEY (poll_item_id) REFERENCES poll_item(id),
-    UNIQUE (voter_name, poll_item_id)
+    UNIQUE (member_id, poll_item_id)
 );
 
-INSERT INTO voting (voter_name, poll_item_id) VALUES
-('alice', 1),
-('alice', 2),
-('bob', 3),
-('bob', 4),
-('eve', 6),
-('alice', 7);
+INSERT INTO voting (member_id, poll_item_id) VALUES
+ (1, 1),
+ (1, 2),
+ (2, 3),
+ (2, 4),
+ (3, 6),
+ (1, 7);
