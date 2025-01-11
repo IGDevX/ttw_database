@@ -8,4 +8,4 @@ FOREIGN KEY (galery_id) REFERENCES galery(id)
 
 INSERT INTO photo (image, galery_id)
 VALUES
-    (LOAD_FILE('./chat.jpeg'), 2)
+    (LOAD_FILE('/var/lib/mysql-files/chat.jpeg'), 2)
