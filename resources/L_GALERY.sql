@@ -5,7 +5,6 @@ CREATE TABLE galery (
     FOREIGN KEY (group_id) REFERENCES `group`(id)
 );
 
--- Insérer des données de test dans la table `galery`
-INSERT INTO galery (name, group_id) VALUES
-    (1,"Cap d'agde vacation", 1),
-    (2,'Cat', 1),
+INSERT INTO galery (id ,name, group_id) VALUES
+(1,'Grau', 1),
+(2,'Cat', 1)
