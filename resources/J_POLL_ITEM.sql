@@ -2,7 +2,7 @@ CREATE TABLE poll_item (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     poll_id INT NOT NULL,
-    FOREIGN KEY (poll_id) REFERENCES `poll`(id)
+    FOREIGN KEY (poll_id) REFERENCES `poll`(id) ON DELETE CASCADE
 );
 
 INSERT INTO poll_item (name, poll_id) VALUES

@@ -2,7 +2,7 @@ CREATE TABLE poll (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     group_id INT NOT NULL,
-    FOREIGN KEY (group_id) REFERENCES `group`(id)
+    FOREIGN KEY (group_id) REFERENCES `group`(id) ON DELETE CASCADE
 );
 
 INSERT INTO poll (name, group_id) VALUES
