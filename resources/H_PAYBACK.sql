@@ -2,11 +2,11 @@ CREATE TABLE payback (
     id INT AUTO_INCREMENT PRIMARY KEY,
     payer_id INT NOT NULL,
     payee_id INT NOT NULL,
-    expense_id INT,
     amount_paid DECIMAL(15, 2) NOT NULL,
+    payment_type_id INT NOT NULL,
     FOREIGN KEY (payer_id) REFERENCES member(id),
     FOREIGN KEY (payee_id) REFERENCES member(id),
-    FOREIGN KEY (expense_id) REFERENCES expense(id)
+    FOREIGN KEY (payment_type_id) REFERENCES payment_type(id)
 );
 
 CREATE VIEW member_balances AS
