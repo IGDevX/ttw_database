@@ -10,4 +10,4 @@ INSERT INTO galery (name) VALUES ('Nature Gallery'), ('Art Gallery'), ('Tech Gal
 -- Insert test data into the photo table
 INSERT INTO photo (image, galery_id)
 VALUES
-    (LOAD_FILE('../images/test.jpeg'), 1),
+    (LOAD_FILE('../images/test.jpeg'), 2),
