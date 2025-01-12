@@ -2,7 +2,7 @@ CREATE TABLE shopping_list (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(100) NOT NULL,
 	group_id INT NOT NULL,
-	FOREIGN_KEY (group_id) REFERENCES `group`(id)
+	FOREIGN KEY (group_id) REFERENCES `group`(id)
 );
 
 INSERT INTO shopping_list (name, group_id) VALUES
@@ -15,7 +15,7 @@ CREATE TABLE shopping_list_item (
 	name VARCHAR(100) NOT NULL,
 	shopping_list_id INT NOT NULL,
 	is_checked BOOL NOT NULL,
-	FOREIGN_KEY (shopping_list_id) REFERENCES shopping_list(id)
+	FOREIGN KEY (shopping_list_id) REFERENCES shopping_list(id)
 );
 
 INSERT INTO shopping_list_item (name, shopping_list_id, is_checked) VALUES
