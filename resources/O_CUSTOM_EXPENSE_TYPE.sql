@@ -9,14 +9,3 @@ CREATE TABLE custom_expense_type (
     FOREIGN KEY (expense_id) REFERENCES `expense`(id) ON DELETE CASCADE,
     FOREIGN KEY (app_expense_type_id) REFERENCES `app_expense_type`(id) ON DELETE CASCADE
 );
-
-INSERT INTO custom_expense_type (label, budget, group_id, app_expense_type_id, expense_id) VALUES
-("Apple", 100, 1, 1, 1),
-("Bus", 50, 1, 2, 2),
-("Colloc", 200, 1, 3, 3),
-("Food", 100, 2, 1, 1),
-("Car", 50, 2, 2, 2),
-("Hotel", 200, 2, 3, 3),
-("Food", 100, 3, 1, 1),
-("Transport", 50, 3, 2, 2),
-("Accomodation", 200, 3, 3, 3);
