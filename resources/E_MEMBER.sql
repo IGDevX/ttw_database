@@ -2,7 +2,7 @@ CREATE TABLE member (
 id INT AUTO_INCREMENT PRIMARY KEY,
 user_id INT NOT NULL,
 group_id INT NOT NULL,
-role_id INT NOT NULL,
+role_id INT NOT NULL DEFAULT 3,
 FOREIGN KEY (user_id) REFERENCES user(id),
 FOREIGN KEY (group_id) REFERENCES `group`(id),
 FOREIGN KEY (role_id) REFERENCES role(id)
